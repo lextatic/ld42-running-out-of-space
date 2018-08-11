@@ -2,7 +2,7 @@
 using UnityEngine.AI;
 
 [RequireComponent(typeof(EnemyMove))]
-public class RandomMoveEnemy : MonoBehaviour
+public class RandomMoveEnemy : PausableBehaviour
 {
 	[SerializeField]
 	private EnemyMove enemyMove;
@@ -13,10 +13,14 @@ public class RandomMoveEnemy : MonoBehaviour
 	private float remainingDistanceThreshold = 1;
 
 	private Vector3 currentTargetPosition;
-
-	void Start ()
+	
+	override public void Resume(bool startup)
 	{
-		NewDestination();
+		base.Resume(startup);
+		if (startup)
+		{
+			NewDestination();
+		}
 	}
 
 	private void Update()

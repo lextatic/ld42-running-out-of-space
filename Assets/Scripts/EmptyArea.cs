@@ -13,7 +13,7 @@ public class EmptyArea : MonoBehaviour
 		var collectible = other.GetComponent<Collectible>();
 		if(collectible != null)
 		{
-			collectible.OnObjectCollected = OnObjectCollected;
+			collectible.OnObjectCollected += OnObjectCollected;
 		}
 	}
 

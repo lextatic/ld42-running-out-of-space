@@ -36,7 +36,7 @@ public class MixedBehaviourEnemyEditor : Editor
 #endif
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class MixedBehaviourEnemy : MonoBehaviour
+public class MixedBehaviourEnemy : PausableBehaviour
 {
 	[SerializeField]
 	private EnemyMove enemyMove;
@@ -56,9 +56,13 @@ public class MixedBehaviourEnemy : MonoBehaviour
 
 	private float startSeekTime;
 
-	void Start ()
+	override public void Resume(bool startup)
 	{
-		NewDestination();
+		base.Resume(startup);
+		if (startup)
+		{
+			NewDestination();
+		}
 	}
 
 	private void Update()

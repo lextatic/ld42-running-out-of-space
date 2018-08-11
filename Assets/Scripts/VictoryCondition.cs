@@ -1,14 +1,24 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class VictoryCondition : MonoBehaviour
 {
-	[SerializeField]
+	public Action<bool> OnVictory;
+
+	public static VictoryCondition Instance;
+
 	private List<Collectible> collectibleList;
+
+	private void Awake()
+	{
+		Instance = this;
+	}
 
 	private void Start()
 	{
-		foreach(Collectible collectible in collectibleList)
+		collectibleList = new List<Collectible>(FindObjectsOfType<Collectible>());
+		foreach (var collectible in collectibleList)
 		{
 			collectible.OnObjectCollected += OnObjectColleced;
 		}
@@ -18,10 +28,9 @@ public class VictoryCondition : MonoBehaviour
 	{
 		collectibleList.Remove(collectible);
 
-		if(collectibleList.Count == 0)
+		if (collectibleList.Count == 0)
 		{
-			Debug.Log("Victory!");
-			// TODO: Load next scene
+			OnVictory?.Invoke(true);
 		}
 	}
 }

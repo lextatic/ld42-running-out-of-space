@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class SelfDestroy : MonoBehaviour
+public class SelfDestroy : PausableBehaviour
 {
 	[SerializeField]
 	private float timeToDestroy = 3f;
+
+	public override void Start()
+	{
+		base.Start();
+		Resume(true);
+	}
 
 	private void Update()
 	{

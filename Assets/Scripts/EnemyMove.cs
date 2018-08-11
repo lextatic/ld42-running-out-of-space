@@ -2,7 +2,7 @@
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class EnemyMove : MonoBehaviour
+public class EnemyMove : PausableBehaviour
 {
 	[SerializeField]
 	private NavMeshAgent navMeshAgent;
@@ -34,8 +34,10 @@ public class EnemyMove : MonoBehaviour
 	private Transform debugObject;
 #endif
 
-	void Awake()
+	public override void Start()
 	{
+		base.Start();
+
 #if UNITY_EDITOR
 		debugObject = Instantiate(debugObjectPrefab, transform.position, transform.rotation).transform;
 		debugObject.GetComponent<MeshRenderer>().material = GetComponent<MeshRenderer>().material; // Só pra atualizar a cor por enquanto
@@ -47,7 +49,19 @@ public class EnemyMove : MonoBehaviour
 			teleporters[i].OnTeleportEntered += OnTeleporterEntered;
 		}
 	}
-	
+
+	override public void Pause(bool victory)
+	{
+		base.Pause(victory);
+		navMeshAgent.isStopped = true;
+	}
+
+	override public void Resume(bool startup)
+	{
+		base.Resume(startup);
+		navMeshAgent.isStopped = false;
+	}
+
 	public void SetDestination(Vector3 destination)
 	{
 #if UNITY_EDITOR

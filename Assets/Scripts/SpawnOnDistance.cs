@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class SpawnOnDistance : MonoBehaviour {
+public class SpawnOnDistance : PausableBehaviour {
 
 	[SerializeField]
 	private GameObject prefab;
@@ -10,9 +10,13 @@ public class SpawnOnDistance : MonoBehaviour {
 
 	private Vector3 lastSpawnPosition;
 
-	void Start ()
+	public override void Resume(bool startup)
 	{
-		Spawn();
+		base.Resume(startup);
+		if (startup)
+		{
+			Spawn();
+		}
 	}
 	
 	void Update ()

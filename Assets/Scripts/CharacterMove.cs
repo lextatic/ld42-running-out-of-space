@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-public class CharacterMove : MonoBehaviour
+public class CharacterMove : PausableBehaviour
 {
 	[SerializeField]
 	private CharacterController characterController;

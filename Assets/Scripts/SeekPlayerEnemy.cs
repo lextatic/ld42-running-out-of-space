@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(EnemyMove))]
 public class SeekPlayerEnemy : MonoBehaviour
 {
 	[SerializeField]
-	private NavMeshAgent navMeshAgent;
+	private EnemyMove enemyMove;
 
 	[SerializeField]
 	private Transform player;
@@ -23,7 +23,7 @@ public class SeekPlayerEnemy : MonoBehaviour
 	private void Update()
 	{
 		startSeekTime -= Time.deltaTime;
-		if (navMeshAgent.remainingDistance < 1 || startSeekTime <= 0)
+		if (enemyMove.RemainingDistance < 1 || startSeekTime <= 0)
 		{
 			NewDestination();
 		}
@@ -31,7 +31,7 @@ public class SeekPlayerEnemy : MonoBehaviour
 
 	private void NewDestination()
 	{
-		navMeshAgent.SetDestination(player.position);
+		enemyMove.SetDestination(player.position);
 		startSeekTime = seekMaxCooldown;
 	}
 }

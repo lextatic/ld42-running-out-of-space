@@ -1,7 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Teleporter : MonoBehaviour
-{	
+{
+	public Action<Collider> OnTeleportEntered;
+
 	[SerializeField]
 	private Transform outPosition;
 
@@ -13,11 +16,6 @@ public class Teleporter : MonoBehaviour
 	private void OnTriggerEnter(Collider other)
 	{
 		other.transform.position = OutPosition;
-
-		var randomMoveEnemy = other.GetComponent<RandomMoveEnemy>();
-		if(randomMoveEnemy != null)
-		{
-			randomMoveEnemy.SetSecondPath();
-		}
+		OnTeleportEntered?.Invoke(other);
 	}
 }

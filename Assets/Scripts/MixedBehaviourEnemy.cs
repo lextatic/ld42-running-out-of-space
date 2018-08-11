@@ -2,7 +2,6 @@
 using UnityEngine.AI;
 #if UNITY_EDITOR
 using UnityEditor;
-
 [CustomEditor(typeof(MixedBehaviourEnemy))]
 public class MixedBehaviourEnemyEditor : Editor
 {
@@ -10,25 +9,28 @@ public class MixedBehaviourEnemyEditor : Editor
 	{
 		MixedBehaviourEnemy myTarget = (MixedBehaviourEnemy)target;
 
+		// Preguiça de refazer o Inspector todo
 		DrawDefaultInspector();
 
-		float minVal = myTarget.seekMaxCooldown.min;
-		float maxVal = myTarget.seekMaxCooldown.max;
-		EditorGUI.BeginChangeCheck();
-		EditorGUILayout.MinMaxSlider($"Seek Max Cooldown ({minVal:0.0}-{maxVal:0.0})", ref minVal, ref maxVal, 1, 5);
-		if (EditorGUI.EndChangeCheck())
-		{
-			myTarget.seekMaxCooldown = new RangeAttribute(minVal, maxVal);
-		}
+		//float minVal = myTarget.minMaxSeekCooldown;
+		//float maxVal = myTarget.maxMaxSeekCooldown;
+		//EditorGUI.BeginChangeCheck();
+		EditorGUILayout.MinMaxSlider($"Seek Max Cooldown ({myTarget.minMaxSeekCooldown:0.0}|{myTarget.maxMaxSeekCooldown:0.0})", ref myTarget.minMaxSeekCooldown, ref myTarget.maxMaxSeekCooldown, 1, 10);
+		//if (EditorGUI.EndChangeCheck())
+		//{
+		//	myTarget.minMaxSeekCooldown = minVal;
+		//	myTarget.maxMaxSeekCooldown = maxVal;
+		//}
 		
-		minVal = myTarget.randomRadius.min;
-		maxVal = myTarget.randomRadius.max;
-		EditorGUI.BeginChangeCheck();
-		EditorGUILayout.MinMaxSlider($"Random Radius ({minVal:0.0}-{maxVal:0.0})", ref minVal, ref maxVal, 1, 20);
-		if (EditorGUI.EndChangeCheck())
-		{
-			myTarget.randomRadius = new RangeAttribute(minVal, maxVal);
-		}
+		//minVal = myTarget.minRandomRadius;
+		//maxVal = myTarget.maxRandomRadius;
+		//EditorGUI.BeginChangeCheck();
+		EditorGUILayout.MinMaxSlider($"Random Radius ({myTarget.minRandomRadius:0.0}|{myTarget.maxRandomRadius:0.0})", ref myTarget.minRandomRadius, ref myTarget.maxRandomRadius, 1, 20);
+		//if (EditorGUI.EndChangeCheck())
+		//{
+		//	myTarget.minRandomRadius = minVal;
+		//	myTarget.maxRandomRadius = maxVal;
+		//}
 	}
 }
 #endif
@@ -37,7 +39,7 @@ public class MixedBehaviourEnemyEditor : Editor
 public class MixedBehaviourEnemy : MonoBehaviour
 {
 	[SerializeField]
-	private NavMeshAgent navMeshAgent;
+	private EnemyMove enemyMove;
 
 	[SerializeField]
 	[Range(0, 1)]
@@ -46,9 +48,11 @@ public class MixedBehaviourEnemy : MonoBehaviour
 	[SerializeField]
 	private Transform player;
 
-	public RangeAttribute seekMaxCooldown = new RangeAttribute(1, 5);
-	
-	public RangeAttribute randomRadius = new RangeAttribute(1, 20);
+	public float minMaxSeekCooldown;
+	public float maxMaxSeekCooldown;
+
+	public float minRandomRadius;
+	public float maxRandomRadius;
 
 	private float startSeekTime;
 
@@ -60,7 +64,7 @@ public class MixedBehaviourEnemy : MonoBehaviour
 	private void Update()
 	{
 		startSeekTime -= Time.deltaTime;
-		if (navMeshAgent.remainingDistance < 1 || startSeekTime <= 0)
+		if (enemyMove.RemainingDistance < 1 || startSeekTime <= 0)
 		{
 			NewDestination();
 		}
@@ -70,15 +74,15 @@ public class MixedBehaviourEnemy : MonoBehaviour
 	{
 		if (Random.Range(0f, 1f) < seekPlayerChance)
 		{
-			navMeshAgent.SetDestination(player.position);
+			enemyMove.SetDestination(player.position);
 		}
 		else
 		{
 			Vector2 randonPosition = Random.insideUnitCircle;
-			Vector3 targetDestination = transform.position + (new Vector3(randonPosition.x, 0, randonPosition.y) * (randomRadius.min + Random.Range(randomRadius.max - randomRadius.min, randomRadius.max)));
-			navMeshAgent.SetDestination(targetDestination);
+			Vector3 targetDestination = transform.position + (new Vector3(randonPosition.x, 0, randonPosition.y) * (minRandomRadius + Random.Range(0, maxRandomRadius - minRandomRadius)));
+			enemyMove.SetDestination(targetDestination);
 		}
 
-		startSeekTime = Random.Range(seekMaxCooldown.min, seekMaxCooldown.max);
+		startSeekTime = Random.Range(minMaxSeekCooldown, maxMaxSeekCooldown);
 	}
 }

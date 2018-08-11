@@ -8,7 +8,7 @@ public class RandomMoveEnemy : MonoBehaviour
 	private NavMeshAgent navMeshAgent;
 
 	[SerializeField]
-	private float randomRandius = 5f;
+	private float randomRadius = 5f;
 
 	void Start ()
 	{

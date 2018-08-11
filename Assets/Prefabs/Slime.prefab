@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 65883308436319616}
   - component: {fileID: 114863065061529354}
   - component: {fileID: 114345467678908206}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a7ef9623ee5fdc41a7a3969c6347726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToDestroy: 3
 --- !u!114 &114863065061529354
 MonoBehaviour:
   m_ObjectHideFlags: 1

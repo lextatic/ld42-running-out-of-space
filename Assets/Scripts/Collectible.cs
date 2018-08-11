@@ -1,21 +1,16 @@
-﻿using System.Collections;
+﻿using System;
 using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
+	public Action<Collectible> OnObjectCollected;
+
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other.CompareTag("Player"))
 		{
-			// WTF, destroy não dava trigger em OnTriggerExit?
-			transform.position = new Vector3(0, -1000, 0);
-			StartCoroutine(DelayedDestroy());
+			OnObjectCollected?.Invoke(this);
+			Destroy(gameObject);
 		}
-	}
-
-	private IEnumerator DelayedDestroy()
-	{
-		yield return null;
-		Destroy(gameObject);
 	}
 }

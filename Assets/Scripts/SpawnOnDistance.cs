@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SpawnOnDistance : MonoBehaviour {
 
@@ -12,13 +10,11 @@ public class SpawnOnDistance : MonoBehaviour {
 
 	private Vector3 lastSpawnPosition;
 
-	// Use this for initialization
 	void Start ()
 	{
 		Spawn();
 	}
 	
-	// Update is called once per frame
 	void Update ()
 	{
 		if(Vector3.Distance(transform.position, lastSpawnPosition) >= spawnDistance)

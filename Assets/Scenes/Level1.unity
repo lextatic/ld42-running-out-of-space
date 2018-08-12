@@ -7537,6 +7537,7 @@ GameObject:
   - component: {fileID: 289510659}
   - component: {fileID: 289510658}
   - component: {fileID: 289510657}
+  - component: {fileID: 289510663}
   m_Layer: 10
   m_Name: Collectible2
   m_TagString: Untagged
@@ -7637,6 +7638,19 @@ Transform:
   m_Father: {fileID: 513840275}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &289510663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 289510656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d19f3f97fdd41a030d94529bad41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floorsParent: {fileID: 1164199175}
+  collectible: {fileID: 289510658}
 --- !u!1 &290423627
 GameObject:
   m_ObjectHideFlags: 0
@@ -12027,6 +12041,7 @@ GameObject:
   - component: {fileID: 481284954}
   - component: {fileID: 481284953}
   - component: {fileID: 481284952}
+  - component: {fileID: 481284958}
   m_Layer: 10
   m_Name: Collectible3
   m_TagString: Untagged
@@ -12127,6 +12142,19 @@ Transform:
   m_Father: {fileID: 1571520049}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &481284958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 481284951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d19f3f97fdd41a030d94529bad41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floorsParent: {fileID: 2065223106}
+  collectible: {fileID: 481284953}
 --- !u!1 &481648084
 GameObject:
   m_ObjectHideFlags: 0
@@ -13832,7 +13860,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.46451077, y: -0.21398336, z: 0.116751865, w: 0.8513577}
+  m_LocalRotation: {x: 0.46451074, y: -0.21398345, z: 0.116752, w: 0.85135764}
   m_LocalPosition: {x: 5.3, y: 27.5, z: -15.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -45221,6 +45249,7 @@ GameObject:
   - component: {fileID: 1829614294}
   - component: {fileID: 1829614293}
   - component: {fileID: 1829614298}
+  - component: {fileID: 1829614299}
   m_Layer: 10
   m_Name: Collectible1
   m_TagString: Untagged
@@ -45321,6 +45350,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1829614299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1829614292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d19f3f97fdd41a030d94529bad41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floorsParent: {fileID: 1176129977}
+  collectible: {fileID: 1829614293}
 --- !u!1 &1831303455
 GameObject:
   m_ObjectHideFlags: 0
@@ -46336,19 +46378,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4350485507185210, guid: a24b4727728f1f7489d735c03047834d, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.46451077
+      value: 0.46451074
       objectReference: {fileID: 0}
     - target: {fileID: 4350485507185210, guid: a24b4727728f1f7489d735c03047834d, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.21398336
+      value: -0.21398345
       objectReference: {fileID: 0}
     - target: {fileID: 4350485507185210, guid: a24b4727728f1f7489d735c03047834d, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.116751865
+      value: 0.116752
       objectReference: {fileID: 0}
     - target: {fileID: 4350485507185210, guid: a24b4727728f1f7489d735c03047834d, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.8513577
+      value: 0.85135764
       objectReference: {fileID: 0}
     - target: {fileID: 4350485507185210, guid: a24b4727728f1f7489d735c03047834d, type: 2}
       propertyPath: m_RootOrder
@@ -47940,6 +47982,7 @@ GameObject:
   - component: {fileID: 1958262764}
   - component: {fileID: 1958262763}
   - component: {fileID: 1958262762}
+  - component: {fileID: 1958262768}
   m_Layer: 10
   m_Name: Collectible4
   m_TagString: Untagged
@@ -48040,6 +48083,19 @@ Transform:
   m_Father: {fileID: 1533352852}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1958262768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1958262761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d19f3f97fdd41a030d94529bad41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floorsParent: {fileID: 96567125}
+  collectible: {fileID: 1958262763}
 --- !u!1 &1962081415
 GameObject:
   m_ObjectHideFlags: 0

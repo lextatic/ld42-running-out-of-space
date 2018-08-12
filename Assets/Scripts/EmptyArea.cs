@@ -7,18 +7,29 @@ public class EmptyArea : MonoBehaviour
 
 	private int objectsInsideCount = 0;
 
+	bool collected = false;
+
+	[SerializeField]
+	Collectible myCollectible;
+
+	private void OnEnable()
+	{
+		myCollectible.OnObjectCollected += OnObjectCollected;
+	}
+
+	private void OnDisable()
+	{
+		myCollectible.OnObjectCollected -= OnObjectCollected;
+	}
+
 	private void OnTriggerEnter(Collider other)
 	{
 		objectsInsideCount++;
-		var collectible = other.GetComponent<Collectible>();
-		if(collectible != null)
-		{
-			collectible.OnObjectCollected += OnObjectCollected;
-		}
 	}
 
 	void OnObjectCollected(Collectible collectible)
 	{
+		collected = true;
 		SubtractAndCheck();
 	}
 
@@ -30,7 +41,7 @@ public class EmptyArea : MonoBehaviour
 	private void SubtractAndCheck()
 	{
 		objectsInsideCount--;
-		if (objectsInsideCount == 0)
+		if (objectsInsideCount == 0 && collected)
 		{
 			OnAreaEmptied?.Invoke();
 			Destroy(gameObject);

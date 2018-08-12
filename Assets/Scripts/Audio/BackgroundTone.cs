@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class BackgroundTone : PausableBehaviour
+public class BackgroundTone : MonoBehaviour
 {
 	[SerializeField]
 	private SimpleAudioEvent backgroundTone;
@@ -9,9 +9,8 @@ public class BackgroundTone : PausableBehaviour
 	[SerializeField]
 	private AudioSource audioSource;
 
-	public override void Start()
+	public void Start()
 	{
-		base.Start();
 		StartCoroutine(PlayTone(2f));
 	}
 

@@ -19,7 +19,7 @@ public class EnemySound : PausableBehaviour
 
 		if(startup)
 		{
-			StartCoroutine(PlayGhostSound(0));
+			StartCoroutine(PlayGhostSound());
 		}
 	}
 
@@ -30,10 +30,11 @@ public class EnemySound : PausableBehaviour
 		StopAllCoroutines();
 	}
 
-	private IEnumerator PlayGhostSound(float time)
+	private IEnumerator PlayGhostSound()
 	{
-		yield return new WaitForSeconds(time);
+		var waitTime = Random.Range(randomTime.minValue, randomTime.maxValue);
+		yield return new WaitForSeconds(waitTime);
 		ghostSounds.Play(audioSource);
-		StartCoroutine(PlayGhostSound(Random.Range(randomTime.minValue, randomTime.maxValue)));
+		StartCoroutine(PlayGhostSound());
 	}
 }

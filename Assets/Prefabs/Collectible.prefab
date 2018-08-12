@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114806400044446988}
   - component: {fileID: 54986019838979360}
   - component: {fileID: 114027647718999806}
+  - component: {fileID: 114110124562727588}
   m_Layer: 10
   m_Name: Collectible
   m_TagString: Untagged
@@ -82,7 +83,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1153171866342676}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.5, y: 0.5, z: 14.5}
+  m_LocalPosition: {x: -11.5, y: 0.5, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4974658102680624}
@@ -172,6 +173,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floorsParent: {fileID: 0}
+  collectible: {fileID: 114806400044446988}
+--- !u!114 &114110124562727588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1153171866342676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b013f5c1129664396cbacddab42151, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particle: {fileID: 198250348625731092, guid: 9d8cff1792c3d9945968e834a38bdb3a, type: 2}
   collectible: {fileID: 114806400044446988}
 --- !u!114 &114806400044446988
 MonoBehaviour:

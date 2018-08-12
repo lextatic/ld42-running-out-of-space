@@ -3,6 +3,12 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
+	[SerializeField]
+	private SimpleAudioEvent collectedSound;
+
+	[SerializeField]
+	private AudioSource audioSource;
+	
 	public Action<Collectible> OnObjectCollected = delegate { };
 
 	private void OnTriggerEnter(Collider other)
@@ -10,6 +16,7 @@ public class Collectible : MonoBehaviour
 		if (other.CompareTag("Player"))
 		{
 			OnObjectCollected?.Invoke(this);
+			collectedSound.Play(audioSource);
 			Destroy(gameObject);
 		}
 	}

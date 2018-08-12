@@ -24,14 +24,17 @@ public class PlayerSound : PausableBehaviour
 				audioSource.Play();
 			}
 
-			float modifier = 0.04f;
+			float pitchModifier = 0.8f;
+			float volumeModifier = 0.05f;
 
-			if(Physics.Raycast(transform.position, -transform.up, 1,  1 << LayerMask.NameToLayer("Effects")))
+			if (Physics.Raycast(transform.position, -transform.up, 1,  1 << LayerMask.NameToLayer("Effects")))
 			{
-				modifier = 0.02f;
+				pitchModifier = 0.6f;
+				volumeModifier = 0.03f;
 			}
 
-			audioSource.pitch = direction.magnitude * modifier;
+			audioSource.pitch = 0.6f + direction.magnitude * pitchModifier - 0.6f;
+			audioSource.volume = volumeModifier;
 		}
 		else
 		{

@@ -10,8 +10,15 @@ public class Floor : MonoBehaviour
 	private Transform floorTiltCollider;
 
 	[SerializeField]
+	private SimpleAudioEvent floorSounds;
+
+	[SerializeField]
 	private EmptyArea emptyArea;
-	
+
+	[SerializeField]
+	private AudioSource audioSource;
+
+
 	// Use this for initialization
 	private void Start ()
 	{
@@ -28,6 +35,7 @@ public class Floor : MonoBehaviour
 	{
 		yield return new WaitForSeconds(Random.Range(0f, 2f));
 		floorFallingTile.isKinematic = false;
+		floorSounds.Play(audioSource);
 		yield return new WaitForSeconds(Random.Range(0.1f, 0.4f));
 		floorTiltCollider.gameObject.SetActive(false);
 		yield return new WaitForSeconds(2f);

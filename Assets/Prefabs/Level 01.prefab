@@ -546,7 +546,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1127543865286916
 GameObject:
   m_ObjectHideFlags: 1
@@ -1344,7 +1344,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1296344543453836
 GameObject:
   m_ObjectHideFlags: 1
@@ -1544,7 +1544,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1336454601761092
 GameObject:
   m_ObjectHideFlags: 1
@@ -3679,7 +3679,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1809553612872784
 GameObject:
   m_ObjectHideFlags: 1
@@ -4079,7 +4079,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 1
+  m_StaticEditorFlags: 69
   m_IsActive: 1
 --- !u!1 &1887224924448108
 GameObject:
@@ -4615,7 +4615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1988906941373544
 GameObject:
   m_ObjectHideFlags: 1
@@ -21777,6 +21777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6930a38da8ba4ad4bba7fc81cca5cf0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myCollectible: {fileID: 114131697835211654}
 --- !u!114 &114183915017443628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21813,6 +21814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6930a38da8ba4ad4bba7fc81cca5cf0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myCollectible: {fileID: 114995570667812836}
 --- !u!114 &114242695387657384
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21847,6 +21849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6930a38da8ba4ad4bba7fc81cca5cf0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myCollectible: {fileID: 114308025676519702}
 --- !u!114 &114336319172503346
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22036,6 +22039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6930a38da8ba4ad4bba7fc81cca5cf0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myCollectible: {fileID: 114199786867217022}
 --- !u!114 &114825882350038124
 MonoBehaviour:
   m_ObjectHideFlags: 1

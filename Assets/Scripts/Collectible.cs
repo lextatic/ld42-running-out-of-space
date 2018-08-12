@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-	public Action<Collectible> OnObjectCollected;
+	public Action<Collectible> OnObjectCollected = delegate { };
 
 	private void OnTriggerEnter(Collider other)
 	{

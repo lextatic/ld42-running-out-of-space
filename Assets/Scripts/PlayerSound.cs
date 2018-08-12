@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PlayerSound : MonoBehaviour
+public class PlayerSound : PausableBehaviour
 {
 	[SerializeField]
 	private AudioSource audioSource;

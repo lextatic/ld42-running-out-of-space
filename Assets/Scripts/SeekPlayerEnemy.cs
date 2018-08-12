@@ -7,7 +7,6 @@ public class SeekPlayerEnemy : PausableBehaviour
 	[SerializeField]
 	private EnemyMove enemyMove;
 
-	[SerializeField]
 	private Transform player;
 
 	[SerializeField]
@@ -20,6 +19,7 @@ public class SeekPlayerEnemy : PausableBehaviour
 		base.Resume(startup);
 		if (startup)
 		{
+			player = GameObject.FindGameObjectWithTag("Player").transform;
 			NewDestination();
 		}
 	}

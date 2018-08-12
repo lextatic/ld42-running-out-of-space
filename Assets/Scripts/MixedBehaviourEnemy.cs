@@ -45,7 +45,6 @@ public class MixedBehaviourEnemy : PausableBehaviour
 	[Range(0, 1)]
 	private float seekPlayerChance = 0.5f;
 
-	[SerializeField]
 	private Transform player;
 
 	public float minMaxSeekCooldown;
@@ -61,6 +60,8 @@ public class MixedBehaviourEnemy : PausableBehaviour
 		base.Resume(startup);
 		if (startup)
 		{
+			player = GameObject.FindGameObjectWithTag("Player").transform;
+
 			NewDestination();
 		}
 	}

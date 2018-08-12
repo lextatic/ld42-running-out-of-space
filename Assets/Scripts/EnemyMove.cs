@@ -40,7 +40,7 @@ public class EnemyMove : PausableBehaviour
 
 #if UNITY_EDITOR
 		debugObject = Instantiate(debugObjectPrefab, transform.position, transform.rotation).transform;
-		debugObject.GetComponent<MeshRenderer>().material = GetComponent<MeshRenderer>().material; // Só pra atualizar a cor por enquanto
+		//debugObject.GetComponent<MeshRenderer>().material = GetComponent<MeshRenderer>().material; // Só pra atualizar a cor por enquanto
 #endif
 		teleporters = FindObjectsOfType<Teleporter>();
 

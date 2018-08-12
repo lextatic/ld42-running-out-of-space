@@ -8,10 +8,10 @@ public class PlayerAnimator : PausableBehaviour
 	[SerializeField]
 	private Transform[] wheels;
 
-	private Vector3 lastPosition;
+	private Vector3 lastDirection;
 
 	// Update is called once per frame
-	void Update ()
+	void LateUpdate ()
 	{
 		float horizontal = Input.GetAxis("Horizontal");
 		float vertical = Input.GetAxis("Vertical");
@@ -23,12 +23,10 @@ public class PlayerAnimator : PausableBehaviour
 			wheel.Rotate(-720 * direction.magnitude * Time.deltaTime, 0, 0);
 		}
 
-
-		var lastFrameMoveDirection = transform.position - lastPosition;
-		float handleValue = Vector3.Dot(Vector3.Cross(direction.normalized, lastFrameMoveDirection.normalized), Vector3.up);
+		var handleValue = Vector3.Cross(transform.forward, lastDirection).y;
 
 		handler.localRotation = Quaternion.Euler(25f, Mathf.Max(Mathf.Min(-360f * handleValue, 30f), -30), 0);
 
-		lastPosition = transform.position;
+		lastDirection = transform.forward;
 	}
 }

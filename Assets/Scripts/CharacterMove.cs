@@ -22,10 +22,6 @@ public class CharacterMove : PausableBehaviour
 			transform.forward = direction;
 		}
 
-		// Se for cair não aceita o move, assim podemos fazer buracos se quiser
-		if (Physics.Raycast(transform.position + transform.forward * 0.3f, -transform.up, 1f))
-		{
-			characterController.SimpleMove(direction * velocity);
-		}
+		characterController.SimpleMove(direction * velocity);
 	}
 }

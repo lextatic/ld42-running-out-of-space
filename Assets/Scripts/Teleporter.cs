@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Teleporter : MonoBehaviour
 {
@@ -15,7 +16,15 @@ public class Teleporter : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		other.transform.position = OutPosition;
+		var navMeshAgent = other.GetComponent<NavMeshAgent>();
+		if (navMeshAgent != null)
+		{
+			navMeshAgent.Warp(OutPosition);
+		}
+		else
+		{
+			other.transform.position = OutPosition;
+		}
 		OnTeleportEntered?.Invoke(other);
 	}
 }

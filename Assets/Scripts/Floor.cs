@@ -20,14 +20,15 @@ public class Floor : MonoBehaviour
 
 
 	// Use this for initialization
-	private void Start ()
+	private void Start()
 	{
 		floorTiltCollider.Rotate(0, Random.Range(0, 4) * 90, 0);
-		emptyArea.OnAreaEmptied += ActivateLock;
+		emptyArea.FloorFall += StartFallRoutine;
 	}
 
-	public void ActivateLock()
+	public void StartFallRoutine()
 	{
+		emptyArea.FloorFall -= StartFallRoutine;
 		StartCoroutine(DelayedFall());
 	}
 

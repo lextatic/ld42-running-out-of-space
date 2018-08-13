@@ -37,6 +37,9 @@ public class Tension : MonoBehaviour
 		float closestEnemy = maxDistance + 1;
 		foreach (var enemy in enemies)
 		{
+			if (enemy == null)
+				continue;
+
 			float dist = Vector3.Distance(this.transform.position, enemy.transform.position);
 			if (dist < maxDistance && closestEnemy > dist)
 			{

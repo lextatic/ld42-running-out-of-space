@@ -27,15 +27,10 @@ public class LevelSetupVFXEditor : Editor
 public class LevelSetupVFX : MonoBehaviour
 {
 	Collectible[] collectibles;
-	VictoryCondition victory;
 
 	private void OnEnable()
 	{
-		victory = FindObjectOfType<VictoryCondition>();
 		collectibles = FindObjectsOfType<Collectible>();
-
-
-		victory.OnVictory += HandleVictory;
 		foreach (var collectible in collectibles)
 		{
 			collectible.OnObjectCollected += HandleObjectCollected;
@@ -44,7 +39,6 @@ public class LevelSetupVFX : MonoBehaviour
 
 	private void OnDisable()
 	{
-		victory.OnVictory -= HandleVictory;
 		foreach (var collectible in collectibles)
 		{
 			collectible.OnObjectCollected -= HandleObjectCollected;
@@ -56,13 +50,6 @@ public class LevelSetupVFX : MonoBehaviour
 		PerformShake();
 	}
 
-
-
-	private void HandleVictory(bool obj)
-	{
-		//PerformShake();
-	}
-
 	[SerializeField]
 	float impactScale = 1f;
 
@@ -70,7 +57,6 @@ public class LevelSetupVFX : MonoBehaviour
 	{
 		ImpactForce.PerformOnChildren(this.transform, impactScale, 0.1f);
 	}
-
 }
 
 static public class ImpactForce
@@ -87,4 +73,5 @@ static public class ImpactForce
 			childtransform.DOLocalJump(childtransform.position, (1 / distance) * distanceScale, 1, 0.5f).SetDelay(distance * delayScale);
 		}
 	}
+
 }

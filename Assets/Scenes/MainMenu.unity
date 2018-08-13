@@ -424,7 +424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 397
+    m_Left: 515
     m_Right: 25
     m_Top: 25
     m_Bottom: 25
@@ -889,8 +889,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 655.5, y: -252.5}
-  m_SizeDelta: {x: 517, y: 249}
+  m_AnchoredPosition: {x: 757, y: -250.875}
+  m_SizeDelta: {x: 484, y: 239.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1085560033
 MonoBehaviour:
@@ -924,26 +924,23 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 0.8
-  m_Text: 'Controls:
+  m_Text: 'You are a spirit trying to exorcide ghosts.
 
 
-    WASD - Movement
+    Destroy all arcane chandeliers to free the area from the ghosts.
 
 
-    Objective:
 
+    Controls: WASD - Movement
 
-    * Grab the magic chandeliers
 
 
     Remarks:
 
 
-    * Don''t let the ghosts get you.
+    1. Don''t let the ghosts get you.
 
-    * Don''t fall on broken floor tiles.
-
-    * Everytime you get a chandelier, you lose that chunk of walkable area.'
+    2. Everytime you get a chandelier, you lose that area.'
 --- !u!222 &1085560034
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1092,8 +1089,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 655.5, y: -556.5}
-  m_SizeDelta: {x: 517, y: 133}
+  m_AnchoredPosition: {x: 757, y: -554.875}
+  m_SizeDelta: {x: 484, y: 136.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1200516276
 MonoBehaviour:
@@ -1242,8 +1239,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 655.5, y: -433.5}
-  m_SizeDelta: {x: 517, y: 93}
+  m_AnchoredPosition: {x: 757, y: -428.625}
+  m_SizeDelta: {x: 484, y: 96.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1347414816
 MonoBehaviour:
@@ -1318,8 +1315,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 655.5, y: -71.5}
-  m_SizeDelta: {x: 517, y: 93}
+  m_AnchoredPosition: {x: 757, y: -73.125}
+  m_SizeDelta: {x: 484, y: 96.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1535472640
 MonoBehaviour:

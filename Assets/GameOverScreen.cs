@@ -9,8 +9,6 @@ public class GameOverScreen : MonoBehaviour
 	[SerializeField]
 	CanvasGroup canvas;
 
-	bool playerIsDead = false;
-
 	private void OnEnable()
 	{
 		DeathTouch.PlayerDeath += HandlePlayerDeath;
@@ -23,14 +21,13 @@ public class GameOverScreen : MonoBehaviour
 
 	private void HandlePlayerDeath()
 	{
-		playerIsDead = true;
 		canvas.DOFade(1f, 1f);
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-		if (playerIsDead && Input.anyKeyDown)
+		if (Input.anyKeyDown && canvas.alpha == 1)
 		{
 			SceneLoader.LoadScene("MainMenu");
 		}

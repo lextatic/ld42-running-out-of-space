@@ -15922,6 +15922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMove: {fileID: 630182279}
   seekPlayerChance: 0.5
+  playerSeekForwardOffset: 0
   minMaxSeekCooldown: 3
   maxMaxSeekCooldown: 5
   minRandomRadius: 3
@@ -33299,7 +33300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1481012554
 Transform:
   m_ObjectHideFlags: 0
@@ -34478,66 +34479,49 @@ Transform:
   m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 481616642}
+  - {fileID: 619938696}
+  - {fileID: 755449675}
+  - {fileID: 596984459}
+  - {fileID: 559112563}
+  - {fileID: 1134096064}
+  - {fileID: 1288010019}
+  - {fileID: 1272896005}
+  - {fileID: 1575611395}
   - {fileID: 1259789082}
   - {fileID: 1832110932}
+  - {fileID: 1232680388}
   - {fileID: 60029120}
   - {fileID: 895908902}
   - {fileID: 41193203}
+  - {fileID: 1743445249}
   - {fileID: 1642198516}
   - {fileID: 1971874152}
   - {fileID: 1319057247}
   - {fileID: 1014755757}
-  - {fileID: 755449675}
-  - {fileID: 481616642}
+  - {fileID: 105955389}
+  - {fileID: 87979094}
   - {fileID: 237999931}
   - {fileID: 1088042737}
-  - {fileID: 1743445249}
-  - {fileID: 1575611395}
+  - {fileID: 677732632}
+  - {fileID: 366380884}
+  - {fileID: 1970527417}
   - {fileID: 115939924}
   - {fileID: 592480494}
   - {fileID: 966812477}
-  - {fileID: 1853273522}
-  - {fileID: 1992977103}
-  - {fileID: 1990037236}
-  - {fileID: 2140476058}
-  - {fileID: 1338699220}
-  - {fileID: 1232680388}
-  - {fileID: 596984459}
-  - {fileID: 103205163}
-  - {fileID: 1864837984}
-  - {fileID: 765115458}
-  - {fileID: 366482003}
-  - {fileID: 414813883}
-  - {fileID: 1771404625}
-  - {fileID: 1976153711}
-  - {fileID: 762577693}
-  - {fileID: 1711471612}
-  - {fileID: 1491637507}
-  - {fileID: 806161690}
-  - {fileID: 1517431295}
-  - {fileID: 1788516822}
-  - {fileID: 271846814}
-  - {fileID: 1458291996}
-  - {fileID: 1064817871}
-  - {fileID: 1020912612}
-  - {fileID: 37305184}
-  - {fileID: 105955389}
-  - {fileID: 87979094}
-  - {fileID: 619938696}
-  - {fileID: 1134096064}
-  - {fileID: 677732632}
-  - {fileID: 366380884}
-  - {fileID: 1288010019}
-  - {fileID: 1970527417}
-  - {fileID: 1272896005}
   - {fileID: 2099551701}
-  - {fileID: 1688974465}
-  - {fileID: 271959260}
-  - {fileID: 1324291169}
+  - {fileID: 1853273522}
   - {fileID: 1947054947}
+  - {fileID: 1688974465}
+  - {fileID: 1992977103}
+  - {fileID: 271959260}
+  - {fileID: 2140476058}
+  - {fileID: 1324291169}
+  - {fileID: 1990037236}
+  - {fileID: 1338699220}
   - {fileID: 904409158}
   - {fileID: 313103788}
-  - {fileID: 559112563}
+  - {fileID: 103205163}
   - {fileID: 778955052}
   - {fileID: 1265467755}
   - {fileID: 738453835}
@@ -34575,6 +34559,23 @@ Transform:
   - {fileID: 2139039515}
   - {fileID: 927497058}
   - {fileID: 1731684247}
+  - {fileID: 1864837984}
+  - {fileID: 765115458}
+  - {fileID: 366482003}
+  - {fileID: 414813883}
+  - {fileID: 1771404625}
+  - {fileID: 1976153711}
+  - {fileID: 762577693}
+  - {fileID: 1711471612}
+  - {fileID: 1491637507}
+  - {fileID: 806161690}
+  - {fileID: 1517431295}
+  - {fileID: 1788516822}
+  - {fileID: 271846814}
+  - {fileID: 1458291996}
+  - {fileID: 1064817871}
+  - {fileID: 1020912612}
+  - {fileID: 37305184}
   m_Father: {fileID: 1800556079}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -42832,9 +42833,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 438948752}
-  - {fileID: 432989198}
   - {fileID: 1899679817}
   - {fileID: 812283287}
+  - {fileID: 432989198}
   - {fileID: 1085543108}
   - {fileID: 481203797}
   - {fileID: 1346513522}

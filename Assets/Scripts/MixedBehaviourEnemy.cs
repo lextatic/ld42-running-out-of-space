@@ -47,6 +47,9 @@ public class MixedBehaviourEnemy : PausableBehaviour
 
 	private Transform player;
 
+	[SerializeField]
+	private float playerSeekForwardOffset = 0;
+
 	public float minMaxSeekCooldown;
 	public float maxMaxSeekCooldown;
 
@@ -79,7 +82,7 @@ public class MixedBehaviourEnemy : PausableBehaviour
 	{
 		if (Random.Range(0f, 1f) < seekPlayerChance)
 		{
-			enemyMove.SetDestination(player.position);
+			enemyMove.SetDestination(player.position + player.forward * playerSeekForwardOffset);
 		}
 		else
 		{

@@ -11,7 +11,7 @@ public abstract class PausableBehaviour : MonoBehaviour
 
 	public virtual void Pause(bool victory)
 	{
-		//enabled = false;
+		enabled = false;
 	}
 
 	public virtual void Resume(bool startup)

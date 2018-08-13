@@ -3848,6 +3848,10 @@ Prefab:
       propertyPath: m_Name
       value: Enemy1
       objectReference: {fileID: 0}
+    - target: {fileID: 1326671292427150, guid: 01db4545895f51e47b3c5e3e55151f85, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01db4545895f51e47b3c5e3e55151f85, type: 2}
   m_IsPrefabAsset: 0
@@ -14160,7 +14164,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: -0.43050486, y: 0.0515645, z: -0.024644328, w: -0.9007771}
+  m_LocalRotation: {x: -0.43050486, y: 0.05156447, z: -0.024644313, w: -0.9007771}
   m_LocalPosition: {x: 5.3, y: 27.5, z: -15.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -16533,7 +16537,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -80}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &625726836
 MonoBehaviour:
@@ -17656,6 +17660,10 @@ Prefab:
     - target: {fileID: 1089090771004012, guid: d64879222c71389438254e450384ffa4, type: 2}
       propertyPath: m_Name
       value: Enemy2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1089090771004012, guid: d64879222c71389438254e450384ffa4, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d64879222c71389438254e450384ffa4, type: 2}
@@ -38623,6 +38631,10 @@ Prefab:
       propertyPath: m_Name
       value: Enemy3
       objectReference: {fileID: 0}
+    - target: {fileID: 1334042294965804, guid: ffc7fbf6d5b6cc74f9e512ddce2a4269, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffc7fbf6d5b6cc74f9e512ddce2a4269, type: 2}
   m_IsPrefabAsset: 0
@@ -40681,6 +40693,10 @@ Prefab:
         type: 2}
       propertyPath: m_AABB.m_Extent.x
       value: 0.21249998
+      objectReference: {fileID: 0}
+    - target: {fileID: 1652250020232804, guid: 5e551719c3c1bb945a0820997e15399e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e551719c3c1bb945a0820997e15399e, type: 2}
@@ -48084,11 +48100,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4350485507185210, guid: a24b4727728f1f7489d735c03047834d, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.0515645
+      value: 0.05156447
       objectReference: {fileID: 0}
     - target: {fileID: 4350485507185210, guid: a24b4727728f1f7489d735c03047834d, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0.024644328
+      value: -0.024644313
       objectReference: {fileID: 0}
     - target: {fileID: 4350485507185210, guid: a24b4727728f1f7489d735c03047834d, type: 2}
       propertyPath: m_LocalRotation.w

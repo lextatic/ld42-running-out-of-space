@@ -15910,7 +15910,7 @@ Camera:
     height: 1
   near clip plane: 7
   far clip plane: 50
-  field of view: 10.0713
+  field of view: 18
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -15934,7 +15934,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: -0.45852062, y: 0.21479823, z: -0.115246736, w: -0.85459864}
+  m_LocalRotation: {x: -0.46451068, y: 0.21398355, z: -0.11675225, w: -0.85135764}
   m_LocalPosition: {x: 5.3, y: 27.5, z: -15.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -36085,6 +36085,16 @@ Prefab:
       propertyPath: m_BackGroundColor.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 215045006520264476, guid: b1c4002d54de1e240a39f20fc367cdd2,
+        type: 2}
+      propertyPath: m_Resolution
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 215045006520264476, guid: b1c4002d54de1e240a39f20fc367cdd2,
+        type: 2}
+      propertyPath: m_BlendDistance
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1c4002d54de1e240a39f20fc367cdd2, type: 2}
   m_IsPrefabAsset: 0
@@ -50291,19 +50301,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4350485507185210, guid: a24b4727728f1f7489d735c03047834d, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0.45852062
+      value: -0.46451068
       objectReference: {fileID: 0}
     - target: {fileID: 4350485507185210, guid: a24b4727728f1f7489d735c03047834d, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.21479823
+      value: 0.21398355
       objectReference: {fileID: 0}
     - target: {fileID: 4350485507185210, guid: a24b4727728f1f7489d735c03047834d, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0.115246736
+      value: -0.11675225
       objectReference: {fileID: 0}
     - target: {fileID: 4350485507185210, guid: a24b4727728f1f7489d735c03047834d, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -0.85459864
+      value: -0.85135764
       objectReference: {fileID: 0}
     - target: {fileID: 4350485507185210, guid: a24b4727728f1f7489d735c03047834d, type: 2}
       propertyPath: m_RootOrder
@@ -50322,22 +50332,22 @@ Prefab:
     - target: {fileID: 114852144974358460, guid: a24b4727728f1f7489d735c03047834d,
         type: 2}
       propertyPath: m_Lens.FieldOfView
-      value: 9.911676
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114705028984944796, guid: a24b4727728f1f7489d735c03047834d,
         type: 2}
       propertyPath: m_TrackedObjectOffset.z
-      value: 0
+      value: 5.8
       objectReference: {fileID: 0}
     - target: {fileID: 114705028984944796, guid: a24b4727728f1f7489d735c03047834d,
         type: 2}
       propertyPath: m_HorizontalDamping
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114705028984944796, guid: a24b4727728f1f7489d735c03047834d,
         type: 2}
       propertyPath: m_VerticalDamping
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114705028984944796, guid: a24b4727728f1f7489d735c03047834d,
         type: 2}
@@ -50390,17 +50400,17 @@ Prefab:
     - target: {fileID: 114705028984944796, guid: a24b4727728f1f7489d735c03047834d,
         type: 2}
       propertyPath: m_LookaheadTime
-      value: 0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114705028984944796, guid: a24b4727728f1f7489d735c03047834d,
         type: 2}
       propertyPath: m_LookaheadSmoothing
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114705028984944796, guid: a24b4727728f1f7489d735c03047834d,
         type: 2}
       propertyPath: m_TrackedObjectOffset.x
-      value: 0
+      value: 6.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a24b4727728f1f7489d735c03047834d, type: 2}

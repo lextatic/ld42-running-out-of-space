@@ -25,7 +25,7 @@ public class PlayerAnimator : PausableBehaviour
 
 		var handleValue = Vector3.Cross(transform.forward, lastDirection).y;
 
-		handler.localRotation = Quaternion.Euler(25f, Mathf.Max(Mathf.Min(-360f * handleValue, 30f), -30), 0);
+		handler.localRotation = Quaternion.Euler(25f, Mathf.Max(Mathf.Min(-360f * handleValue * 30, 30f), -30), 0);
 
 		lastDirection = transform.forward;
 	}

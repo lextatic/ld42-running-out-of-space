@@ -1,8 +1,6 @@
 ﻿using DG.Tweening;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOverScreen : MonoBehaviour
 {
@@ -29,7 +27,7 @@ public class GameOverScreen : MonoBehaviour
 	{
 		if (Input.anyKeyDown && canvas.alpha == 1)
 		{
-			SceneLoader.LoadScene("MainMenu");
+			SceneLoader.LoadScene(SceneManager.GetActiveScene().name);
 		}
 	}
 }

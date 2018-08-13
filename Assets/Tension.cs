@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Cinemachine;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
@@ -17,7 +18,10 @@ public class Tension : MonoBehaviour
 	float vignetteFactor = 1;
 
 	[SerializeField]
-	float maxDistance;
+	float maxDistance = 5;
+
+	[SerializeField]
+	CinemachineVirtualCamera cmCam;
 
 	// Use this for initialization
 	void Start()
@@ -37,6 +41,8 @@ public class Tension : MonoBehaviour
 			if (dist < maxDistance && closestEnemy > dist)
 			{
 				closestEnemy = dist;
+				float fvalue = Mathf.Clamp(dist * 12, 9, 18);
+				cmCam.m_Lens.FieldOfView = Mathf.Lerp(cmCam.m_Lens.FieldOfView, fvalue, 0.2f);
 			}
 		}
 
@@ -45,5 +51,9 @@ public class Tension : MonoBehaviour
 
 		vignette.intensity.value = finalRatio;
 		chromatic.intensity.value = finalRatio;
+
+
+
+
 	}
 }

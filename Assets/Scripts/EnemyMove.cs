@@ -54,7 +54,10 @@ public class EnemyMove : PausableBehaviour
 	override public void Pause(bool victory)
 	{
 		base.Pause(victory);
-		navMeshAgent.isStopped = true;
+		if (victory)
+		{
+			navMeshAgent.isStopped = true;
+		}
 	}
 
 	override public void Resume(bool startup)

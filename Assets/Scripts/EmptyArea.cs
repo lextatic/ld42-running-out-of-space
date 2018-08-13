@@ -31,11 +31,10 @@ public class EmptyArea : MonoBehaviour
 		if (other.CompareTag("Player"))
 		{
 			playerInside = true;
+			return;
 		}
-		else if (other.CompareTag("Enemy"))
-		{
-			ghostsInside++;
-		}
+
+		ghostsInside++;
 	}
 
 	void OnObjectCollected(Collectible collectible)
@@ -53,14 +52,13 @@ public class EmptyArea : MonoBehaviour
 			{
 				FloorFall();
 			}
+			return;
 		}
-		else if (other.CompareTag("Enemy"))
+
+		ghostsInside--;
+		if (collected && ghostsInside == 0)
 		{
-			ghostsInside--;
-			if (collected && ghostsInside == 0)
-			{
-				GhostsCleared();
-			}
+			GhostsCleared();
 		}
 
 		Check();
@@ -70,7 +68,7 @@ public class EmptyArea : MonoBehaviour
 	{
 		if (!playerInside && ghostsInside == 0 && collected)
 		{
-			Destroy(gameObject);
+			//Destroy(gameObject);
 		}
 	}
 }

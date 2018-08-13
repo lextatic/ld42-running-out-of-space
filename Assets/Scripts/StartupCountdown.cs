@@ -16,7 +16,7 @@ public class StartupCountdown : MonoBehaviour
 
 	private IEnumerator Countdown()
 	{
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(3f);
 		Debug.Log("3");
 		yield return new WaitForSeconds(1f);
 		Debug.Log("2");

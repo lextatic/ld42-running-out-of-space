@@ -15695,8 +15695,8 @@ Camera:
     width: 1
     height: 1
   near clip plane: 7
-  far clip plane: 50
-  field of view: 13
+  far clip plane: 50.12361
+  field of view: 7.032218
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -15720,8 +15720,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.46072468, y: -0.21450016, z: 0.115800954, w: 0.85341233}
-  m_LocalPosition: {x: 5.3, y: 27.5, z: -15.9}
+  m_LocalRotation: {x: -0.48780516, y: 0.26352257, z: -0.15729767, w: -0.8172267}
+  m_LocalPosition: {x: 5.2942753, y: 27.616158, z: -15.875872}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 997132019}
@@ -49967,31 +49967,31 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4350485507185210, guid: a24b4727728f1f7489d735c03047834d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.3
+      value: 5.2942753
       objectReference: {fileID: 0}
     - target: {fileID: 4350485507185210, guid: a24b4727728f1f7489d735c03047834d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 27.5
+      value: 27.616158
       objectReference: {fileID: 0}
     - target: {fileID: 4350485507185210, guid: a24b4727728f1f7489d735c03047834d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -15.9
+      value: -15.875872
       objectReference: {fileID: 0}
     - target: {fileID: 4350485507185210, guid: a24b4727728f1f7489d735c03047834d, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.46072468
+      value: -0.48780516
       objectReference: {fileID: 0}
     - target: {fileID: 4350485507185210, guid: a24b4727728f1f7489d735c03047834d, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.21450016
+      value: 0.26352257
       objectReference: {fileID: 0}
     - target: {fileID: 4350485507185210, guid: a24b4727728f1f7489d735c03047834d, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.115800954
+      value: -0.15729767
       objectReference: {fileID: 0}
     - target: {fileID: 4350485507185210, guid: a24b4727728f1f7489d735c03047834d, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.85341233
+      value: -0.8172267
       objectReference: {fileID: 0}
     - target: {fileID: 4350485507185210, guid: a24b4727728f1f7489d735c03047834d, type: 2}
       propertyPath: m_RootOrder
@@ -50084,6 +50084,11 @@ Prefab:
         type: 2}
       propertyPath: m_LookaheadSmoothing
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114705028984944796, guid: a24b4727728f1f7489d735c03047834d,
+        type: 2}
+      propertyPath: m_TrackedObjectOffset.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a24b4727728f1f7489d735c03047834d, type: 2}

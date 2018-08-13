@@ -7,12 +7,13 @@ public class LockObject : MonoBehaviour
 
 	private void Start()
 	{
-		emptyArea.GhostsCleared += ActivateLock;
+		emptyArea.FloorFall += ActivateLock;
 		gameObject.SetActive(false);
 	}
 
 	public void ActivateLock()
 	{
+		emptyArea.FloorFall -= ActivateLock;
 		gameObject.SetActive(true);
 	}
 }

@@ -3,14 +3,18 @@ using UnityEngine;
 
 public class EmptyArea : MonoBehaviour
 {
-	public Action OnAreaEmptied;
+	private bool collected = false;
 
-	private int objectsInsideCount = 0;
-
-	bool collected = false;
+	private bool playerInside = false;
 
 	[SerializeField]
-	Collectible myCollectible;
+	private Collectible myCollectible;
+
+	private int ghostsInside = 0;
+
+	public event Action GhostsCleared = delegate { };
+
+	public event Action FloorFall = delegate { };
 
 	private void OnEnable()
 	{
@@ -24,26 +28,48 @@ public class EmptyArea : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		objectsInsideCount++;
+		if (other.CompareTag("Player"))
+		{
+			playerInside = true;
+		}
+		else if (other.CompareTag("Enemy"))
+		{
+			ghostsInside++;
+		}
 	}
 
 	void OnObjectCollected(Collectible collectible)
 	{
 		collected = true;
-		SubtractAndCheck();
+		//Check();
 	}
 
 	private void OnTriggerExit(Collider other)
 	{
-		SubtractAndCheck();
+		if (other.CompareTag("Player"))
+		{
+			playerInside = false;
+			if (collected)
+			{
+				FloorFall();
+			}
+		}
+		else if (other.CompareTag("Enemy"))
+		{
+			ghostsInside--;
+			if (collected && ghostsInside == 0)
+			{
+				GhostsCleared();
+			}
+		}
+
+		Check();
 	}
 
-	private void SubtractAndCheck()
+	private void Check()
 	{
-		objectsInsideCount--;
-		if (objectsInsideCount == 0 && collected)
+		if (!playerInside && ghostsInside == 0 && collected)
 		{
-			OnAreaEmptied?.Invoke();
 			Destroy(gameObject);
 		}
 	}

@@ -7,7 +7,7 @@ public class LockObject : MonoBehaviour
 
 	private void Start()
 	{
-		emptyArea.OnAreaEmptied += ActivateLock;
+		emptyArea.GhostsCleared += ActivateLock;
 		gameObject.SetActive(false);
 	}
 

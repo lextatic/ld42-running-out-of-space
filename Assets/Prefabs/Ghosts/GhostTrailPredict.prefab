@@ -107,7 +107,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1532408653582238
 GameObject:
   m_ObjectHideFlags: 1
@@ -197,7 +197,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4000175834964504
 Transform:
   m_ObjectHideFlags: 1
@@ -277,7 +277,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1652250020232804}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -2.5, y: 0.5, z: -3.5}
+  m_LocalPosition: {x: -8.5, y: 0.5, z: -1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4120966899984746}
@@ -721,8 +721,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: -0.012500048, y: 0.46250004, z: 0.025000095}
-    m_Extent: {x: 0.2125001, y: 0.3125, z: 0.17499995}
+    m_Center: {x: -0.012499809, y: 0.46250004, z: 0.024999976}
+    m_Extent: {x: 0.21249962, y: 0.3125, z: 0.17500007}
   m_DirtyAABB: 0
 --- !u!183 &183276355931116764
 Cloth:

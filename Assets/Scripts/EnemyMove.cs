@@ -39,9 +39,9 @@ public class EnemyMove : PausableBehaviour
 		base.Start();
 
 #if UNITY_EDITOR
-		debugObject = Instantiate(debugObjectPrefab, transform.position, transform.rotation).transform;
-		var mat = debugObject.GetComponent<MeshRenderer>().material;
-		debugObject.GetComponent<MeshRenderer>().material = new Material(mat);
+		//debugObject = Instantiate(debugObjectPrefab, transform.position, transform.rotation).transform;
+		//var mat = debugObject.GetComponent<MeshRenderer>().material;
+		//debugObject.GetComponent<MeshRenderer>().material = new Material(mat);
 #endif
 		teleporters = FindObjectsOfType<Teleporter>();
 
@@ -69,7 +69,7 @@ public class EnemyMove : PausableBehaviour
 	public void SetDestination(Vector3 destination)
 	{
 #if UNITY_EDITOR
-		debugObject.position = destination;
+		//debugObject.position = destination;
 #endif
 
 		var bestPath = new NavMeshPath();

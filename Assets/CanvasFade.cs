@@ -20,6 +20,8 @@ public class CanvasFade : MonoBehaviour
 	void OnEnable()
 	{
 		StartCoroutine(DoTween());
+
+		DOTween.SetTweensCapacity(1250, 780);
 	}
 
 

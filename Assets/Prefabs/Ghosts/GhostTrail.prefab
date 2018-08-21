@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4817721921022578}
-  - component: {fileID: 114950414651656286}
   - component: {fileID: 114476856887329830}
   m_Layer: 0
   m_Name: Ghost
@@ -711,17 +710,6 @@ MonoBehaviour:
   maxMaxSeekCooldown: 10
   minRandomRadius: 5
   maxRandomRadius: 15
---- !u!114 &114950414651656286
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1281488831495840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a840d4fe540eef74b900d0ac392c060e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &136572961309723172
 CapsuleCollider:
   m_ObjectHideFlags: 1

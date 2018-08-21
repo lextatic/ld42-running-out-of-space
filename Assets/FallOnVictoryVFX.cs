@@ -50,7 +50,7 @@ public class FallOnVictoryVFX : MonoBehaviour
 		{
 			var childtransform = transform.GetChild(i);
 			var distance = Vector3.Distance(playerPosition, childtransform.position);
-			childtransform.DOLocalMoveY(childtransform.localPosition.y - 5, 0.5f).SetEase(Ease.InExpo).SetDelay(delay + distance * delayScale);
+			childtransform.DOLocalMoveY(childtransform.localPosition.y - 10, 0.5f).SetEase(Ease.InExpo).SetDelay(delay + distance * delayScale);
 		}
 	}
 }

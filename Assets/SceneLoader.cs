@@ -8,6 +8,12 @@ public class SceneLoader : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			Application.Quit();
+			return;
+		}
+
 		if (Input.anyKeyDown)
 		{
 			LoadScene("Level1");

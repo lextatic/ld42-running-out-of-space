@@ -25,7 +25,7 @@ public class StartupCountdown : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
-			Application.Quit();
+			SceneLoader.LoadScene("MainMenu");
 		}
 	}
 }
